@@ -13,7 +13,7 @@ const router = express.Router();
 
 const JWT_SECRET = process.env.JWT_SECRET; 
 const EMAIL_SECRET = process.env.EMAIL_SECRET || 'emailSecretKey';
-const APP_BASE_URL = process.env.APP_BASE_URL || 'http://localhost:6969';
+const APP_BASE_URL = process.env.APP_BASE_URL || 'http://localhost:4050';
 
 // ----------------------------
 // Multer Setup for File Uploads
@@ -100,7 +100,7 @@ router.post('/signup', async (req, res) => {
     // Generate a verification token (expires in 1 day)
     const emailToken = jwt.sign({ email: newUser.email }, EMAIL_SECRET, { expiresIn: '1d' });
     // Use backend verification route (returns HTML)
-    const url = `${APP_BASE_URL}/api/auth/verify?token=${emailToken}`;
+    const url = `${APP_BASE_URL}/verify?token=${emailToken}`;
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,

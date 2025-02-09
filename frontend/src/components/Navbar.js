@@ -91,12 +91,12 @@ const Navbar = ({ toggleTheme }) => {
       if (!token) return;
 
       try {
-        const response = await axios.get('http://localhost:6969/api/auth/profile', {
+        const response = await axios.get('http://localhost:3000/api/auth/profile', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
         if (response.data.profilePic) {
-          const imageUrl = `http://localhost:6969${response.data.profilePic}`;
+          const imageUrl = `http://localhost:3000${response.data.profilePic}`;
           setProfilePhoto(imageUrl);
           localStorage.setItem('profilePhotoUrl', imageUrl);
         }

@@ -46,7 +46,7 @@ const Settings = () => {
     const token = localStorage.getItem('token');
     try {
       await axios.put(
-        'http://localhost:6969/api/auth/settings',
+        'http://localhost:3000/api/auth/settings',
         { name, email, password },
         { headers: { Authorization: `Bearer ${token}` } }
       );

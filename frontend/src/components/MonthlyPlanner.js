@@ -60,7 +60,7 @@ const MonthlyPlanner = () => {
   const fetchPlannerData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:6969/api/auth/planner', {
+      const response = await axios.get('http://localhost:3000/api/auth/planner', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setPlannerData(response.data.expenditurePlanner || {});
@@ -84,7 +84,7 @@ const MonthlyPlanner = () => {
     const cleanedData = cleanupEmptyMonths(updatedData);
     try {
       const updateResponse = await axios.put(
-        'http://localhost:6969/api/auth/planner',
+        'http://localhost:3000/api/auth/planner',
         { expenditurePlanner: cleanedData },
         { headers: { Authorization: `Bearer ${token}` } }
       );
