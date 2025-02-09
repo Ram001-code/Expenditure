@@ -56,7 +56,7 @@ const Login = () => {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post('http://localhost:3000/api/auth/signin', { email, password });
+      const response = await axios.post('http://localhost:6969/api/auth/signin', { email, password });
       const { token } = response.data;
       // Save token to localStorage
       localStorage.setItem('token', token);

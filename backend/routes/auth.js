@@ -13,7 +13,7 @@ const router = express.Router();
 
 const JWT_SECRET = process.env.JWT_SECRET; 
 const EMAIL_SECRET = process.env.EMAIL_SECRET || 'emailSecretKey';
-const APP_BASE_URL = process.env.APP_BASE_URL || 'http://localhost:3000';
+const APP_BASE_URL = process.env.APP_BASE_URL || 'http://localhost:6969';
 
 // ----------------------------
 // Multer Setup for File Uploads

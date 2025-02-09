@@ -30,7 +30,7 @@ sequelize.sync({ alter: true }).then(() => {
 // Mount the authentication routes (all under /api/auth)
 app.use('/api/auth', authRoutes);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 6969;
 app.listen(PORT, () => {
   console.log(`🚀 Server started on port ${PORT}`);
 });

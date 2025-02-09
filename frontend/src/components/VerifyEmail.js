@@ -28,11 +28,11 @@ const VerifyEmail = () => {
   useEffect(() => {
     const verifyEmail = async () => {
       try {
-        await axios.get(`http://localhost:3000/api/auth/verify?token=${token}`);
+        await axios.get(`http://localhost:6969/api/auth/verify?token=${token}`);
         setStatus('Email Verified ✅');
         setTimeout(() => {
           navigate('/login');
-        }, 3000);
+        }, 6969);
       } catch (error) {
         console.error('Verification error:', error);
         setStatus('Invalid or expired token ❌');
