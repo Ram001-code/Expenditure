@@ -69,7 +69,7 @@ const ChangeProfilePhotoModal = ({ onClose }) => {
       const formData = new FormData();
       formData.append('profilePhoto', file);
   
-      const response = await axios.post('http://localhost:3000/api/auth/uploadProfilePhoto', formData, {
+      const response = await axios.post('http://159.65.146.67:3000/api/auth/uploadProfilePhoto', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,

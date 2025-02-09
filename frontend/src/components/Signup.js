@@ -54,7 +54,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/auth/signup', { email, password });
+      const response = await axios.post('http://159.65.146.67:3000/api/auth/signup', { email, password });
       if (response.status === 201) {
         setSignupSuccess(true);
       }
@@ -67,7 +67,7 @@ const Signup = () => {
   const resendEmail = async () => {
     setResendLoading(true);
     try {
-      await axios.post('http://localhost:3000/api/auth/resend-verification', { email });
+      await axios.post('http://159.65.146.67:3000/api/auth/resend-verification', { email });
       alert('Verification email resent!');
     } catch (error) {
       console.error('Resend error:', error);

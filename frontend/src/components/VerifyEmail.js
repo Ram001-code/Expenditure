@@ -28,7 +28,7 @@ const VerifyEmail = () => {
   useEffect(() => {
     const verifyEmail = async () => {
       try {
-        await axios.get(`http://localhost:3000/api/auth/verify?token=${token}`);
+        await axios.get(`http://159.65.146.67:3000/api/auth/verify?token=${token}`);
         setStatus('Email Verified ✅');
         setTimeout(() => {
           navigate('/login');

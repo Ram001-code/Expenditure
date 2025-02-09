@@ -97,7 +97,7 @@ const AddExpense = ({ refreshPlanner }) => {
   
       console.log('Sending request to planner API with token:', token);
   
-      const getResponse = await axios.get('http://localhost:3000/api/auth/planner', {
+      const getResponse = await axios.get('http://159.65.146.67:3000/api/auth/planner', {
         headers: { Authorization: `Bearer ${token}` }
       });
   
@@ -127,7 +127,7 @@ const AddExpense = ({ refreshPlanner }) => {
       console.log('Updating planner data with:', plannerData);
   
       const updateResponse = await axios.put(
-        'http://localhost:3000/api/auth/planner',
+        'http://159.65.146.67:3000/api/auth/planner',
         { expenditurePlanner: plannerData },
         { headers: { Authorization: `Bearer ${token}` } }
       );
